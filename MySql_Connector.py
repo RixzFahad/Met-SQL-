@@ -57,6 +57,16 @@ rows = cursor.fetchall()
 for row in rows:
     print(row)
 
+# Update User Data
+"""student_update = "UPDATE rixz_met SET COURSE = %s WHERE ID = %s"
+values = ("Data Science", 22)
+cursor.execute(student_update, values)
+conn.commit()"""
+
+
+students_remove = "DELETE FROM users1 WHERE NAME = %s"
+cursor.execute(students_remove, ("Samantha",))
+conn.commit()
 # 7️ Close connection
 cursor.close()
 conn.close()
